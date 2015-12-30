@@ -1,0 +1,60 @@
+
+
+<script>
+var data = [
+    {
+        "Image": "/assets/uploads/default/sales/SalecenterGraphic1OnePrice.jpg",
+        "Header": "<h4>One Price Covers It All</h4>",
+        "Text": "<p>Promotion details embedded here by Globenetix.</p>",
+        "Link": "/flooring/carpet",
+        "show": "True"
+    },
+    {
+        "Image": "/assets/uploads/default/sales/SalecenterGraphic2OnePrice_1.jpg",
+        "Header": "<h4>SpecialFinancingAvailable</h4>",
+        "Text": "<p>PromotiondetailsembeddedherebyGlobenetix.</p>",
+        "Link": "/apply-for-credit",
+        "show": "True"
+    },
+    {
+        "Image": "/assets/uploads/default/sales/SalecenterGraphic3GrillContest_NEW.jpg",
+        "Header": "<h4>Sizzlin'SummerSweepstakes</h4>",
+        "Text": "<p>PromotiondetailsembeddedherebyGlobenetix.</p>",
+        "Link": "/apply-for-credit",
+        "show": "True"
+    },
+    {
+        "Image": "/assets/uploads/default/sales/salecenter-coupon.jpg",
+        "Header": "<h4>500OffCoupon</h4>",
+        "Text": "<p>PromotiondetailsembeddedherebyGlobenetix.</p>",
+        "Link": "/coupon",
+        "show": "True"
+    },
+    {
+        "Image": "/assets/uploads/default/sales/salecenter-room-measure.jpg",
+        "Header": "<h4>FreeRoomMeasure</h4>",
+        "Text": "<p>PromotiondetailsembeddedherebyGlobenetix.</p>",
+        "Link": "/free-measure",
+        "show": "True"
+    }];
+		 var html = "";
+   $.each(data, function(i, val){
+       if(val.show == "True"){
+           
+         html = html +  ' <div class="row">'+
+                    '<div class="col-md-6">'+
+                      '<img class="img-responsive" src="'+val.Image+'">'+
+                    '</div>'+
+                    '<div class="col-md-6">'+
+                      val.Header+""+val.Text+
+                      '<a href="'+val.Link+'">Enter Now</a>'+
+                    '</div>'+
+                  '</div>'+
+                  '<hr />';
+       }
+       else{
+         html = '';  
+       }
+   });
+$('#data').append(html);
+</script>
